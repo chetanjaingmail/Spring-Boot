@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<!-- Constructor Injection --> 
+	<bean id="stud" class="org.intutech.bean.Student">
+		<constructor-arg value="Xyz" index="1"></constructor-arg>
+		<constructor-arg value="22" index="0"></constructor-arg>
+		<constructor-arg value="B.E." index="2"></constructor-arg>
+		
+		<constructor-arg index="3">
+			<list>
+				<value>9955621475</value>
+				<value>8855442121</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg index="4">
+			<set>	
+				<value>Core Java</value>
+				<value>JSP, Servlet</value>
+				<value>Spring</value>
+			</set>
+		</constructor-arg>
+		
+		<constructor-arg index="5">
+			<map>
+				<entry key="234564" value="Mumbai"></entry>
+				<entry key="966542" value="Pune"></entry>
+			</map>
+		</constructor-arg>
+		
+	</bean>
+           
+           
+</beans>

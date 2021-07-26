@@ -1,0 +1,13 @@
+package org.intutech;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SbJpaRelationsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SbJpaRelationsApplication.class, args);
+	}
+
+}

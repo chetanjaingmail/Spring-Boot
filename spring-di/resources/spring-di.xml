@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+    <bean id="address" class="org.intutech.bean.Address">
+    	<property name="city" value="Pune"></property>
+    	<property name="pincode" value="567856"></property>
+    	<property name="state" value="MH"></property>
+    </bean>    
+        
+	<bean id="emp" class="org.intutech.bean.Employee">
+		<property name="id" value="121"></property>
+		<property name="name" value="Pqr"></property>
+		<property name="add" ref="address"></property> <!-- DI by SI -->
+	</bean>
+ <!-- =================================================================== -->
+ 
+ <bean id="p1" class="org.intutech.bean.Project">
+ 	<property name="title" value="Bookmark Management"></property>
+ 	<property name="language" value="Jsp,Servlet, Core Java"></property>
+ </bean>
+ 
+ <bean id="p2" class="org.intutech.bean.Project">
+ 	<property name="title" value="course Management"></property>
+ 	<property name="language" value="Spring, Core Java"></property>
+ </bean>
+ 
+ <bean id="stud" class="org.intutech.bean.Student">
+ 	<constructor-arg value="111" index="0"></constructor-arg>
+ 	<constructor-arg value="Xyz" index="1"></constructor-arg>
+ 	
+ 	<constructor-arg index="2">
+ 		<list>
+ 			<ref bean="p1" /> 
+ 			<ref bean="p2" />
+ 		</list>
+ 	</constructor-arg>
+ 	
+ </bean>          
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+</beans>

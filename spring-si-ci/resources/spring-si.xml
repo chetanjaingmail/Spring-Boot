@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+    <!-- Setter Injection (SI) -->       
+	<bean id="emp" class="org.intutech.bean.Employee">
+		<property name="id" value="12"></property>
+		<property name="name" value="Abc"></property>
+		<property name="email" value="Abc@gmail.com"></property>
+		<property name="salary" value="45345.34"></property>
+		<property name="activeFlag" value="true"></property>
+		<property name="contact">
+			<list>
+				<value>567567567</value>
+				<value>867867867</value>
+			</list>
+		</property>
+		
+		<property name="skills">
+			<list>
+				<value>Core Java</value>
+				<value>Advance Java</value>
+				<value>Html</value>			
+			</list>
+		</property>
+		
+		<property name="address">
+			<map>
+				<entry key="567567" value="Mumbai"></entry>
+				<entry key="789786" value="Pune"></entry>
+			</map>
+		</property>
+		
+		<property name="projects">
+			<set>
+				<value>Abc Project</value>
+				<value>Xyz Project</value>
+			</set>
+		</property>
+		
+	</bean>
+           
+</beans>
